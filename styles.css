@@ -1,0 +1,134 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #14364f #f4f4f4;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #14364f;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+section {
+    padding: 60px 0;
+}
+
+footer {
+    background-color: #14364f;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.calculator-container {
+    background-color: #fff;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#calculator-form {
+    display: grid;
+    gap: 20px;
+}
+
+label {
+    font-size: 1.2em;
+    color: #14364f;
+}
+
+input,
+select,
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #14364f;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1e4b6d;
+}
+
+#result-message {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+
+.cta {
+    background-color: #14364f;
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+}
+
+.cta h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ea6110;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ff7c2b;
+}
+
+#result-message {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+/* Estilos para el scroll bar en WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #14364f;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f4f4f4;
+}
