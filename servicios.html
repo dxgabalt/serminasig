@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Servicios - SERMINASIG</title>
+    <link rel="icon" href="isotipo.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de vincular tu archivo CSS aquí -->
+
+    <style>
+        /* Estilos adicionales para secciones interactivas */
+.interactive-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.interactive-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #14364f;
+}
+
+.interactive-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.gray-bg {
+    background-color: #f4f4f4;
+}
+
+/* Estilos para la Galería de Proyectos con Revolution Slider */
+.revolution-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.project-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 16px;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+}
+
+.project-item img {
+    width: 300px;
+    height: 200px;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 16px;
+}
+
+.project-item:hover img {
+    transform: scale(1.2);
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.project-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Estilos para la Sección de Nuestros Clientes */
+.client-testimonials {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.testimonial-item {
+    max-width: 400px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.client-testimonials img {
+    max-width: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Estilos para la Sección de Ubicación */
+.location-map {
+    margin-top: 20px;
+}
+
+/* Estilos para la Sección de Preguntas Frecuentes (FAQ) */
+.faq-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.faq-item {
+    max-width: 400px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h3 {
+    color: #14364f;
+}
+
+/* Estilos para la Sección de Nuestra Empresa */
+#empresa .mission-statement {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 20px;
+    color: #555;
+}
+
+#empresa .team-members {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+#empresa .team-member {
+    max-width: 300px;
+    margin: 20px;
+    text-align: center;
+}
+
+#empresa .team-member img {
+    max-width: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="top-line">
+            <div class="logo">
+                <img src="logo.png" alt="Logo de Serminasig">
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=100077431314455" target="_blank" class="icon-link"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank" class="icon-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank" class="icon-link"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="bottom-line">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="empresa.html">Empresa</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="contacto.html">Contáctanos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <section id="introduccion-servicios" class="interactive-section">
+        <div class="content">
+            <h2>Nuestros Servicios</h2>
+            <p>Serminasig ofrece una amplia gama de servicios especializados en tratamientos químicos industriales. Nuestra experiencia y compromiso con la calidad nos han convertido en líderes en el sector.</p>
+            <p>Explora nuestros servicios a continuación y descubre cómo podemos satisfacer tus necesidades de tratamiento de superficies.</p>
+        </div>
+    </section>
+    
+<!-- Sección de Tratamiento de Superficies -->
+<section id="tratamiento-superficies" class="interactive-section gray-bg">
+    <div class="content">
+        <h2>Tratamiento de Superficies</h2>
+        <p>Nuestro enfoque en el tratamiento de superficies abarca diversas aplicaciones, asegurando la máxima protección y durabilidad. Algunos de nuestros servicios incluyen:</p>
+        <ul>
+            <li>Limpieza y preparación de superficies metálicas.</li>
+            <li>Protección contra la corrosión con pasivado químico.</li>
+            <li>Formulación de desengrasantes industriales.</li>
+            <li>Limpieza profunda de tuberías.</li>
+            <li>Sistema de gestión y cumplimiento para garantizar estándares de calidad y seguridad.</li>
+        </ul>
+        <p>Contamos con tecnologías avanzadas y profesionales altamente capacitados para proporcionar soluciones efectivas en cada aplicación.</p>
+    </div>
+</section>
+
+<!-- Sección de Aplicaciones -->
+<section id="aplicaciones" class="interactive-section">
+    <div class="content">
+        <h2>Aplicaciones</h2>
+        <p>Nuestros servicios de tratamiento de superficies se aplican en diversas industrias y contextos. Algunas de las aplicaciones más comunes incluyen:</p>
+        <div class="surface-treatment">
+            <h3>Alcance - Tratamiento de Superficies Metálicas</h3>
+            <ul>
+                <li><i class="fas fa-pipe"></i>Tuberías, tanques (de agua, procesos) y domos de calderas de baja y alta presión.</li>
+                <li><i class="fas fa-pipe"></i>Tuberías de vapor, condensados, agua cruda tratada de proceso.</li>
+                <!-- Agrega más elementos según sea necesario -->
+            </ul>
+        </div>
+        <div class="surface-treatment">
+            <h3>Alcance - Tratamiento de Superficies con Aplicación de Pinturas</h3>
+            <ul>
+                <li><i class="fas fa-industry"></i>Estructuras costeras e industriales.</li>
+                <li><i class="fas fa-building"></i>Estructuras de uso general.</li>
+                <!-- Agrega más elementos según sea necesario -->
+            </ul>
+        </div>
+    </div>
+</section>
+
+    
+<!-- Sección de Galería de Proyectos con Revolution Slider -->
+<section id="galeria-proyectos" class="interactive-section">
+    <div class="content">
+        <h2>Galería de Proyectos</h2>
+        <div class="revolution-slider">
+            <!-- Agrega la biblioteca y configuración del slider aquí -->
+            <div class="project-item" onclick="openModal('proyecto1')">
+                <img src="proyecto1.jpg" alt="Proyecto 1">
+                <span class="overlay">Proyecto 1</span>
+            </div>
+            <div class="project-item" onclick="openModal('proyecto2')">
+                <img src="proyecto2.jpg" alt="Proyecto 2">
+                <span class="overlay">Proyecto 2</span>
+            </div>
+            <!-- Agrega más proyectos según sea necesario -->
+        </div>
+        <p>Descubre nuestra excelencia en acción a través de una variedad de proyectos destacados que hemos llevado a cabo con éxito.</p>
+    </div>
+</section>
+
+<!-- Sección de Nuestros Clientes -->
+<section id="clientes" class="interactive-section gray-bg">
+    <div class="content">
+        <h2>Nuestros Clientes</h2>
+        <div class="client-testimonials">
+            <div class="testimonial-item">
+                <img src="cliente1.png" alt="Logo Cliente 1">
+                <p>"Hemos confiado en SERMINASIG para nuestros proyectos y han superado nuestras expectativas en cada paso del camino. ¡Altamente recomendados!"</p>
+                <span class="client-name">Juan Pérez, CEO Empresa XYZ</span>
+            </div>
+            <!-- Agrega más testimonios según sea necesario -->
+        </div>
+    </div>
+</section>
+
+    
+<!-- Sección de Ubicación -->
+<section id="ubicacion" class="interactive-section">
+    <div class="content">
+        <h2>Ubicación</h2>
+        <p>Nos encontramos convenientemente ubicados para atender tus necesidades. Visítanos en nuestra sede y descubre cómo podemos ayudarte.</p>
+        <div class="location-map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3896.118001029299!2d-86.89533302670696!3d12.44185782627466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f711fe63bc8911b%3A0xb3a24c9fb06820d9!2sSERMINASIG!5e0!3m2!1sen!2sni!4v1704060562678!5m2!1sen!2sni"
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- Sección de Preguntas Frecuentes (FAQ) -->
+<section id="faq" class="interactive-section gray-bg">
+    <div class="content">
+        <h2>Preguntas Frecuentes (FAQ)</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <h3>¿Cómo puedo solicitar un presupuesto?</h3>
+                <p>Puedes solicitar un presupuesto completando nuestro formulario de contacto o llamándonos directamente. Estamos aquí para ayudarte.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Cuánto tiempo lleva completar un proyecto?</h3>
+                <p>La duración de un proyecto varía según su alcance y complejidad. Podemos proporcionarte un cronograma detallado durante la consulta inicial.</p>
+            </div>
+            <!-- Agrega más preguntas y respuestas según sea necesario -->
+        </div>
+    </div>
+</section>
+
+<!-- Agrega más secciones según sea necesario -->
+
+    <!-- Pie de Página -->
+    <footer>
+        <section id="pagos" class="payments">
+            <div class="container">
+                <h2>Aceptamos pagos con</h2>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-paypal"></i>
+                    <i class="fas fa-university"></i>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Enlaces</h3>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Empresa</a></li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Información</h3>
+                    <ul>
+                        <li><a href="#">Aviso de privacidad</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-media">
+                        <a href="https://www.facebook.com/profile.php?id=100077431314455" target="_blank"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <p>&copy; 2023 Serminasig. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

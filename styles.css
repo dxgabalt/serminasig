@@ -3,77 +3,526 @@ body {
     margin: 0;
     padding: 0;
     overflow-y: scroll;
-    scrollbar-width: thin;
-    scrollbar-color: #14364f #f4f4f4;
     background-color: #f4f4f4;
 }
 
 header {
-    background-color: #14364f;
+    background-color: #f4f4f4;
     color: #fff;
-    padding: 15px 0;
+    padding: 10px 0;
     text-align: center;
 }
 
-nav ul {
+.top-line,
+.bottom-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    flex-grow: 1; /* Para que el logo ocupe el espacio disponible */
+    align-items: center;
+}
+
+.logo img {
+    max-width: 240px;
+    height: auto;
+}
+
+.social-icons a {
+    display: inline-block;
+    color: #14364f;
+    margin-right: 10px;
+    font-size: 1.8em;
+    text-decoration: none;
+    transition: color 0.3s; /* Transición para el hover */
+}
+
+.social-icons a:hover {
+    color: #ea6110;
+}
+
+.social-icons .icon-circle {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-color: #1e4b6d; /* Color azul para el círculo */
+    border-radius: 50%;
+    text-align: center;
+    line-height: 32px;
+    transition: background-color 0.3s; /* Transición para el hover */
+}
+
+.social-icons a:hover .icon-circle {
+    background-color: #ea6110; /* Color naranja para el círculo al pasar el ratón encima */
+}
+
+.bottom-line {
+    background-color: #14364f; /* Color azul para la segunda línea */
+    padding: 10px 20px;
+    border-bottom: 1px solid #fff; /* Borde blanco, línea más gruesa */
+}
+
+.bottom-line nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
 }
 
-nav li {
-    display: inline;
+.bottom-line nav li {
     margin-right: 20px;
 }
 
-section {
-    padding: 60px 0;
+.bottom-line a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s; /* Transición para el hover */
 }
 
+.bottom-line a:hover {
+    color: #ea6110;
+}
+
+.menu-icon {
+    display: none; /* Inicialmente oculto en pantallas grandes */
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.social-icons .icon-circle {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-color: #1e4b6d; /* Color azul para el círculo */
+    border-radius: 50%;
+    text-align: center;
+    line-height: 32px;
+    transition: background-color 0.3s; /* Transición para el hover */
+}
+
+.social-icons a:hover .icon-circle {
+    background-color: #ea6110; /* Color naranja para el círculo al pasar el ratón encima */
+}
+
+/* Estilos para la Tercera Línea */
+.third-line {
+    background-color: #14364f; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    text-align: right;
+    padding: 10px 0; /* Ajusta el espaciado según tus necesidades */
+}
+
+.contact-info {
+    display: flex;
+    font-size: 16px;
+    margin-right: 90px;
+}
+
+/* Estilos adicionales para iconos */
+.contact-info i {
+    margin-right: 5px;
+    font-size: 1.2em;
+}
+
+/* Estilos para el enlace de correo electrónico */
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    margin-right: 20px;
+}
+
+.contact-info a:hover {
+    color: #ea6110; /* Cambia el color al pasar el ratón */
+}
+
+
+/* Estilos para el menú desplegable en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .top-line {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-icons {
+        margin-top: 10px; /* Espaciado entre los iconos y el logo en pantallas pequeñas */
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block; /* Mostrar el icono de hamburguesa en pantallas pequeñas */
+        margin-top: 10px; /* Ajuste de espaciado entre el icono de menú y la barra superior */
+    }
+
+    .menu-icon i {
+        color: #14364f;
+    }
+
+    .menu-open .menu-icon i {
+        color: #ea6110; /* Cambiar el color al abrir el menú */
+    }
+
+    .social-icons {
+        margin-top: 10px; /* Espaciado entre los iconos y el logo en pantallas pequeñas */
+        text-align: center; /* Centrar los iconos en pantallas pequeñas */
+    }
+
+    .social-icons a {
+        margin-right: 10px;
+    }
+
+    .social-icons .icon-circle {
+        margin-left: 5px; /* Espaciado entre el icono y el círculo */
+        margin-right: 5px;
+    }
+
+    .bottom-line nav {
+        flex-direction: column; /* Mostrar en columna en pantallas pequeñas */
+        align-items: center; /* Centrar los elementos en pantallas pequeñas */
+        top: 200px; /* Ajusta según el tamaño de la barra superior */
+        left: 0;
+        width: 100%;
+        background-color: #14364f;
+        display: none;
+        /* Nuevos estilos para que el menú se despliegue hacia abajo */
+        top: 200px;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .bottom-line nav.active {
+        display: flex;
+        flex-direction: column; /* Añadir dirección de columna al menú desplegable */
+        transform: translateY(0);
+    }
+
+    .bottom-line a {
+        padding: 10px 20px;
+        border-bottom: 1px solid #fff;
+    }
+    
+    .bottom-line nav ul {
+        flex-direction: column; /* Mostrar en columna en pantallas pequeñas */
+        align-items: center; /* Centrar los elementos en pantallas pequeñas */
+    }
+
+    .bottom-line nav li {
+        margin-bottom: 10px; /* Espaciado entre elementos en pantallas pequeñas */
+    }
+    
+    .third-line {
+        display: none;
+    }
+}
+
+
+/* Banner Principal */
+.banner {
+    text-align: left; /* Alinear el texto a la izquierda */
+    padding: 150px 20px;
+    background: url('banner.png') center/cover no-repeat; /* Fondo con degradado y tu imagen */
+    color: #fff; /* Texto en color blanco para contrastar con el fondo */
+}
+
+.banner h2 {
+    font-size: 24px; /* Tamaño de fuente para pantallas pequeñas */
+    margin-bottom: 20px;
+    font-weight: bold; /* Texto en negrita */
+    letter-spacing: 1px; /* Espaciado entre letras */
+}
+
+@media screen and (max-width: 768px) {
+    .banner {
+        padding: 10px 1px; /* Ajustar el espaciado en pantallas pequeñas */
+    }
+
+    .banner h2 {
+        font-size: 10px; /* Ajustar el tamaño de fuente en pantallas pequeñas */
+    }
+}
+
+
+/* Estilos para secciones de contenido */
+.content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 10px 10px;
+}
+
+/* Estilos para secciones específicas */
+.gray-bg {
+    background-color: #f4f4f4; /* Fondo gris para esta sección */
+}
+
+/* Estilos mejorados para secciones interactivas */
+.section-title {
+    font-size: 28px;
+    color: #14364f; /* Color de texto principal */
+    margin-bottom: 15px;
+}
+
+.section-description {
+    font-size: 18px;
+    color: #666; /* Color de texto secundario */
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Estilos específicos para Licencia de Higiene y Seguridad */
+#licencia .license-image {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+}
+
+#licencia img {
+    width: 100%; /* Garantiza que la imagen se ajuste al 100% de su contenedor */
+}
+
+
+/* Estilos específicos para ¿Quiénes Somos? */
+#quienes-somos .logo-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#quienes-somos .logo-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Estilos adicionales para mejorar la apariencia visual */
+.section-title {
+    color: #14364f;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+/* Estilos para secciones interactivas */
+.interactive-section {
+    padding: 50px 0;
+    position: relative;
+}
+
+.interactive-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.gray-bg::before {
+    background-color: #f4f4f4; /* Color de fondo gris */
+}
+
+/* Estilos específicos para Campo de Aplicaciones */
+#campo-aplicaciones .section-title {
+    color: #2c3e50; /* Color del título principal */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.applications-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.application-item {
+    background-color: #ecf0f1; /* Color de fondo de los ítems */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.application-item:hover {
+    transform: scale(1.05);
+}
+
+.application-item i {
+    font-size: 2em;
+    color: #3498db; /* Color del ícono */
+    margin-bottom: 10px;
+}
+
+.application-item h3 {
+    color: #2c3e50; /* Color del título del ítem */
+}
+
+.application-item p {
+    color: #7f8c8d; /* Color del texto del ítem */
+}
+
+/* Estilos para Alcance - Tratamiento de Superficies */
+.surface-treatment {
+    margin-top: 40px;
+}
+
+.surface-treatment h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.surface-treatment ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.surface-treatment li {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.surface-treatment li i {
+    position: absolute;
+    left: -30px;
+    font-size: 20px;
+    color: #3498db; /* Color azul */
+}
+
+
+
+/* Footer Styles */
 footer {
     background-color: #14364f;
     color: #fff;
+    padding: 30px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.payments {
     text-align: center;
-    padding: 20px 0;
+}
+
+.payment-icons {
+    font-size: 24px;
+    margin-top: 15px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin-right: 30px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.social-media a {
+    color: #fff;
+    font-size: 24px;
+    margin-right: 15px;
+    text-decoration: none; /* Elimina el subrayado predeterminado */
+}
+
+.social-media a:hover {
+    color: #ea6110; /* Cambia el color al pasar el ratón encima */
+}
+
+/* Enlaces en el contenido del footer */
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s; /* Agrega una transición al color */
+}
+
+.footer-section a:hover {
+    color: #ea6110; /* Cambia el color al pasar el ratón encima */
+}
+
+/* Responsive Footer */
+@media screen and (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Estilos para la sección de la calculadora */
+.calculator-section {
+    background-color: #14364f;
+    color: #fff;
+    padding: 50px 20px;
 }
 
 .calculator-container {
-    background-color: #fff;
     max-width: 600px;
     margin: 0 auto;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 #calculator-form {
-    display: grid;
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 label {
-    font-size: 1.2em;
-    color: #14364f;
+    margin-top: 15px;
 }
 
-input,
-select,
-button {
-    width: 100%;
+input, select, button {
+    margin-bottom: 20px;
     padding: 10px;
-    font-size: 1em;
+    width: 100%;
     box-sizing: border-box;
 }
 
 button {
-    background-color: #14364f;
+    background-color: #ea6110;
     color: #fff;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1.2em;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #1e4b6d;
+    background-color: #ff8c3a;
 }
 
 #result-message {
@@ -82,46 +531,74 @@ button:hover {
 }
 
 
-.cta {
-    background-color: #14364f;
-    color: #fff;
-    text-align: center;
-    padding: 40px;
+/* Estilos para la sección de contacto */
+.contact-section {
+    background-color: #f4f4f4;
+    color: #14364f;
+    padding: 50px 20px;
 }
 
-.cta h2 {
-    font-size: 2em;
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-form {
     margin-bottom: 20px;
 }
 
-.cta p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
 }
 
-.cta-button {
-    display: inline-block;
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+button {
     background-color: #ea6110;
     color: #fff;
-    padding: 15px 30px;
-    text-decoration: none;
+    border: none;
+    padding: 15px 20px;
     font-size: 1.2em;
-    border-radius: 5px;
+    cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.cta-button:hover {
-    background-color: #ff7c2b;
+button:hover {
+    background-color: #ff8c3a;
 }
 
-#result-message {
-    font-size: 1.2em;
-    margin-top: 20px;
+.contact-info {
+    display: contents;
+    justify-content: space-around;
 }
+
+.contact-item {
+    text-align: center;
+}
+
+.info-item i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+
 
 /* Estilos para el scroll bar en WebKit (Chrome, Safari) */
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -131,4 +608,233 @@ button:hover {
 
 ::-webkit-scrollbar-track {
     background-color: #f4f4f4;
+}
+
+/* Estilos para Decapados Químicos Industriales */
+#decapados-quimicos p {
+    font-size: 18px;
+    color: #333;
+    margin-top: 30px;
+}
+
+.section-title[data-aos="fade-up"] {
+    animation: fadeInUp 1s ease-out;
+}
+
+.section-description[data-aos="fade-up"],
+.surface-treatment[data-aos="fade-up"] {
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos adicionales para secciones */
+.interactive-section {
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.interactive-section h2 {
+    font-size: 2.8em;
+    margin-bottom: 30px;
+    color: #ea6110;
+}
+
+.interactive-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: #333;
+    align-self: start;
+    align-items: normal;
+
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 20px;
+    margin: 15px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.4s ease-in-out;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Estilos adicionales para la Galería de Proyectos */
+#proyectos .project {
+    margin-bottom: 40px;
+}
+
+#proyectos h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #14364f;
+}
+
+#proyectos p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.image-gallery img {
+    width: calc(33.33% - 20px); /* Ajusta el ancho según tus preferencias */
+    margin: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+
+/* Estilos para la Sección de Nuestros Clientes */
+#clientes .clients-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.client-item {
+    width: 48%;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.client-item:hover {
+    transform: scale(1.05);
+}
+
+.client-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+
+/* Estilos para la Sección de Ubicación */
+#ubicacion iframe {
+    width: 100%;
+    height: 900px;
+    border: 1px solid #ddd; /* Borde para un aspecto más elegante */
+    border-radius: 8px; /* Bordes redondeados */
+    margin-top: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#ubicacion iframe:hover {
+    transform: scale(1.02);
+}
+
+
+/* Estilos adicionales para la Sección de Preguntas Frecuentes (FAQ) */
+#faq .faq-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-item:hover {
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efecto de sombra al pasar el mouse */
+}
+
+.faq-item h3 {
+    margin-bottom: 10px;
+    font-size: 1.8em;
+    color: #14364f;
+}
+
+.faq-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+
+.whatsapp-button {
+    background-color: #25D366; /* Color de WhatsApp */
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.whatsapp-button i {
+    margin-right: 10px;
 }

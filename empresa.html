@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serminasig - Sobre Nosotros</title>
+    <!-- Agrega tus enlaces a hojas de estilo (CSS) aquí -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="isotipo.svg">
+    <!-- Agrega tus enlaces a fuentes, iconos o cualquier otro recurso aquí -->
+    <!-- También puedes agregar metatags para SEO -->
+    <!-- Agregamos AOS para animaciones al hacer scroll -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+    <style>
+        /* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Estilos para secciones interactivas */
+.interactive-section {
+    padding: 40px 20px;
+}
+
+.interactive-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #14364f;
+}
+
+.interactive-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #555;
+    justify-content: left;
+    align-items: normal;
+}
+
+.section-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.gray-bg {
+    background-color: #f4f4f4;
+}
+
+/* Estilos para listas */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #14364f;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Agregamos estilos específicos para la sección de proyectos destacados */
+#proyectos-destacados ul {
+    padding-left: 20px;
+}
+
+#proyectos-destacados ul li {
+    margin-bottom: 10px;
+}
+
+/* Agregamos estilos específicos para la sección de responsabilidad social */
+#responsabilidad-social ul {
+    padding-left: 20px;
+}
+
+#responsabilidad-social ul li {
+    margin-bottom: 10px;
+}
+
+/* Estilos adicionales para secciones */
+.image-gallery {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 16px;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 420px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 16px;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.2);
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- Agrega tu barra de navegación si la tienes -->
+    <!-- Puedes crear un encabezado con una imagen representativa y el nombre de tu empresa -->
+    <header>
+        <div class="top-line">
+            <div class="logo">
+                <img src="logo.png" alt="Logo de Serminasig">
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=100077431314455" target="_blank" class="icon-link"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank" class="icon-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank" class="icon-link"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="bottom-line">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="empresa.html">Empresa</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="contacto.html">Contáctanos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección Principal: Acerca de Nosotros -->
+    <section id="acerca-de" class="interactive-section">
+        <div class="content">
+            <h2>Acerca de Nosotros</h2>
+            <p>Serminasig es una empresa líder en la prestación de servicios de tratamientos químicos industriales. Con una trayectoria de más de [número] años en el mercado, nos hemos destacado por brindar soluciones integrales y de alta calidad a nuestros clientes.</p>
+            <p>Nuestro compromiso con la excelencia y la innovación nos ha posicionado como referentes en la industria, ofreciendo servicios que abarcan desde la limpieza y preparación de superficies hasta la aplicación de recubrimientos protectores avanzados.</p>
+            <p>En Serminasig, nos enorgullece contar con un equipo de profesionales altamente capacitados y comprometidos, así como con tecnologías de vanguardia que nos permiten cumplir con los más altos estándares de calidad y seguridad.</p>
+            <img src="banner.png" alt="Acerca de Nosotros Imagen" class="section-image" data-aos="fade-up">
+        </div>
+    </section>
+
+    <!-- Sección: Nuestra Historia -->
+    <section id="historia" class="gray-bg interactive-section">
+        <div class="content">
+            <h2>Nuestra Historia</h2>
+            <p>Desde nuestra fundación en [año de fundación], hemos experimentado un crecimiento constante y hemos evolucionado para adaptarnos a las necesidades cambiantes del mercado. Comenzamos como una pequeña empresa local y, gracias a nuestro compromiso con la excelencia, hemos expandido nuestras operaciones a nivel nacional e internacional.</p>
+            <p>A lo largo de los años, hemos llevado a cabo proyectos destacados en diversas industrias, consolidándonos como expertos en tratamientos químicos especializados. Nuestra historia está marcada por la satisfacción de nuestros clientes y los resultados exitosos que hemos logrado en cada proyecto.</p>
+            <img src="historia_imagen.jpg" alt="Nuestra Historia Imagen" class="section-image" data-aos="fade-up">
+        </div>
+    </section>
+
+    <!-- Sección: Nuestros Valores -->
+    <section id="valores" class="interactive-section">
+        <div class="content">
+            <h2>Nuestros Valores</h2>
+            <p>En Serminasig, nos guiamos por sólidos valores que definen nuestra cultura empresarial y orientan nuestro comportamiento en cada proyecto:</p>
+            <ul>
+                <li><strong>Compromiso:</strong> Nos comprometemos a cumplir con las expectativas de nuestros clientes y a superarlas.</li>
+                <li><strong>Calidad:</strong> Buscamos la excelencia en cada detalle, garantizando la calidad en todos nuestros servicios.</li>
+                <li><strong>Innovación:</strong> Nos mantenemos a la vanguardia de la tecnología y adoptamos enfoques innovadores para ofrecer soluciones efectivas.</li>
+                <li><strong>Seguridad:</strong> La seguridad es nuestra prioridad. Implementamos prácticas seguras en todas nuestras operaciones.</li>
+                <li><strong>Colaboración:</strong> Fomentamos un ambiente de colaboración y trabajo en equipo, tanto dentro de nuestra empresa como con nuestros clientes.</li>
+            </ul>
+            <img src="valores_imagen.jpg" alt="Nuestros Valores Imagen" class="section-image" data-aos="fade-up">
+        </div>
+    </section>
+
+    <!-- Sección: Nuestro Equipo -->
+    <section id="equipo" class="gray-bg interactive-section">
+        <div class="content">
+            <h2>Nuestro Equipo</h2>
+            <p>Detrás de cada proyecto exitoso, hay un equipo dedicado y apasionado. En Serminasig, contamos con profesionales altamente calificados en diversas disciplinas, incluyendo ingenieros químicos, técnicos especializados y expertos en seguridad industrial.</p>
+            <p>Nuestro equipo se caracteriza por su compromiso con la eficiencia y la seguridad en cada tarea que emprendemos. Trabajamos de la mano con nuestros clientes para comprender sus necesidades y ofrecer soluciones personalizadas que superen sus expectativas.</p>
+            <img src="equipo_imagen.jpg" alt="Nuestro Equipo Imagen" class="section-image" data-aos="fade-up">
+        </div>
+    </section>
+
+    <!-- Sección: Certificaciones y Reconocimientos -->
+    <section id="certificaciones" class="interactive-section">
+        <div class="content">
+            <h2>Certificaciones y Reconocimientos</h2>
+            <p>En Serminasig, nos enorgullece contar con certificaciones que respaldan nuestra dedicación a la calidad y la seguridad en cada proyecto. Algunas de nuestras certificaciones incluyen:</p>
+            <ul>
+                <li><i class="fas fa-certificate"></i> Certificación de Calidad ISO 9001: [Año]</li>
+                <li><i class="fas fa-shield-alt"></i> Certificación en Seguridad Industrial: [Año]</li>
+                <!-- Agrega más certificaciones y reconocimientos específicos -->
+            </ul>
+            <img src="certificaciones_imagen.jpg" alt="Certificaciones Imagen" class="section-image" data-aos="fade-up">
+        </div>
+    </section>
+
+    <!-- Sección: Proyectos Destacados -->
+    <section id="proyectos-destacados" class="gray-bg interactive-section">
+        <div class="content">
+            <h2>Proyectos Destacados</h2>
+            <p>Hemos tenido el privilegio de participar en proyectos significativos que han destacado por su magnitud y complejidad. Algunos de nuestros proyectos más destacados incluyen:</p>
+            <ul>
+                <li><strong>Proyecto 1:</strong> Eliminación de Raíz del Óxido en Estructuras Metálicas de Bodegas mediante el Método SSPC-SP-8.</li>
+                <li><strong>Proyecto 2:</strong> Desengrase y Pasivado de Superficie de Rotor para preservación y garantía de mayor vida útil.</li>
+                <li><strong>Proyecto 3:</strong> Restauración de Válvulas Industriales con aplicación de sistema de alto sólidos.</li>
+                <li><strong>Proyecto 4:</strong> Restauración de Cojinetes con Aplicación de Pinturas para limpieza, pasivación y protección anticorrosiva.</li>
+                <!-- Agrega más proyectos destacados con descripciones detalladas -->
+            </ul>
+        </div>
+    </section>
+
+    <!-- Sección: Responsabilidad Social -->
+    <section id="responsabilidad-social" class="interactive-section">
+        <div class="content">
+            <h2>Responsabilidad Social</h2>
+            <p>En Serminasig, estamos comprometidos con la responsabilidad social y contribuimos al bienestar de la comunidad. Algunas de nuestras iniciativas incluyen:</p>
+            <ul>
+                <li><strong>Programas Educativos:</strong> Colaboramos con instituciones educativas locales para fomentar el desarrollo académico y profesional de los estudiantes.</li>
+                <li><strong>Sostenibilidad Ambiental:</strong> Implementamos prácticas y tecnologías sostenibles en nuestras operaciones para minimizar nuestro impacto ambiental.</li>
+                <li><strong>Participación Comunitaria:</strong> Nos involucramos activamente en eventos y proyectos que benefician a la comunidad, promoviendo la inclusión y el bienestar social.</li>
+            </ul>
+            <img src="responsabilidad_social_imagen.jpg" alt="Responsabilidad Social Imagen" class="section-image" data-aos="fade-up">
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <section id="pagos" class="payments">
+            <div class="container">
+                <h2>Aceptamos pagos con</h2>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-paypal"></i>
+                    <i class="fas fa-university"></i>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Enlaces</h3>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Empresa</a></li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Información</h3>
+                    <ul>
+                        <li><a href="#">Aviso de privacidad</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-media">
+                        <a href="https://www.facebook.com/profile.php?id=100077431314455" target="_blank"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <p>&copy; 2023 Serminasig. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Agrega tus enlaces a scripts (JavaScript) aquí -->
+    <!-- Puedes utilizar AOS para animaciones al hacer scroll, por ejemplo -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

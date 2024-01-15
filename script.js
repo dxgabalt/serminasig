@@ -40,3 +40,30 @@ function calcularCostoManoDeObra(surfaceArea) {
     
     return tarifaPorMetroCuadrado * surfaceArea;
 }
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const menuIcon = document.querySelector('.menu-icon');
+    const navMenu = document.querySelector('.bottom-line nav');
+
+    menuIcon.addEventListener('click', function () {
+        navMenu.classList.toggle('active');
+        menuIcon.classList.toggle('menu-open');
+    });
+
+    // Cerrar el menú al hacer clic en un enlace
+    navMenu.addEventListener('click', function () {
+        navMenu.classList.remove('active');
+        menuIcon.classList.remove('menu-open');
+    });
+});
+
+
+
+function openModal(category) {
+    // Lógica para abrir un modal o galería de imágenes según la categoría
+    // Puedes implementar esta función según las necesidades de tu proyecto
+    console.log(`Abrir modal para la categoría: ${category}`);
+}
